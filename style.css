@@ -200,6 +200,91 @@ section {
     background: var(--blue);
 }
 
+/* ================================
+   CERTIFICATIONS
+================================ */
+
+.certifications {
+    margin-top: 50px;
+}
+
+.certifications h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #1f2937;
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.certification-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 190px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.certification-card h3 {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin: 0 0 12px;
+    color: #111827;
+}
+
+.certification-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #6b7280;
+    margin: 0 0 20px;
+}
+
+.certification-card a {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    color: #374151;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.certification-card a:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+@media (max-width: 900px) {
+    .certification-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .certification-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certification-card {
+        padding: 20px;
+    }
+}
 /* =========================
    EXPERIENCE
 ========================= */
