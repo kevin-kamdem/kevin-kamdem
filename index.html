@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kevin kamdem | Technicien Méthodes Industrialisation</title>
+
+    <meta name="description"
+          content="CV de Kevin kamdem - Technicien Méthodes Industrialisation spécialisé en amélioration continue, Lean Manufacturing et industrialisation.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark: #17202a;
+            --dark-2: #263442;
+            --blue: #1769aa;
+            --blue-light: #eaf4fb;
+            --text: #263238;
+            --muted: #667781;
+            --light: #f5f7f9;
+            --white: #ffffff;
+            --border: #dfe5e9;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(23, 32, 42, 0.96);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #dce4e9;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background: var(--dark);
+            color: white;
+            padding: 90px 25px;
+        }
+
+        .hero-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1;
+            margin-bottom: 18px;
+            letter-spacing: -2px;
+        }
+
+        .hero .title {
+            font-size: 22px;
+            color: #7fc4f4;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            color: #d5dde2;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .hero-description strong {
+            color: white;
+        }
+
+        .contact-card {
+            background: #202d39;
+            border: 1px solid #344552;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        .contact-item {
+            margin: 12px 0;
+            color: #cbd5da;
+            font-size: 14px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: white;
+            margin-bottom: 2px;
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--blue);
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        .experience:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience::before {
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background: var(--blue);
+            border-radius: 50%;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 5px;
+        }
+
+        .experience h3 {
+            color: var(--dark);
+            font-size: 20px;
+        }
+
+        .date {
+            color: var(--blue);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .company {
+            color: var(--muted);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .experience ul {
+            padding-left: 20px;
+        }
+
+        .experience li {
+            margin-bottom: 10px;
+        }
+
+        .result {
+            font-weight: 700;
+            color: var(--blue);
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .skill-card h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: white;
+            border: 1px solid #d5dde2;
+            border-radius: 5px;
+            padding: 6px 10px;
+            font-size: 13px;
+            color: #44535c;
+        }
+
+        /* =========================
+           FORMATION
+        ========================= */
+
+        .education {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 25px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .education:last-child {
+            border-bottom: none;
+        }
+
+        .education-year {
+            color: var(--blue);
+            font-weight: 700;
+        }
+
+        .education h3 {
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .education p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           PROJECTS / RESULTS
+        ========================= */
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .result-card {
+            padding: 25px;
+            background: var(--blue-light);
+            border-radius: 10px;
+        }
+
+        .result-number {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--blue);
+            margin-bottom: 5px;
+        }
+
+        .result-card p {
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        /* =========================
+           SOFT SKILLS
+        ========================= */
+
+        .soft-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .soft-skill {
+            padding: 10px 16px;
+            border-radius: 20px;
+            background: var(--blue-light);
+            color: var(--blue);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--dark);
+            color: #b9c4ca;
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* =========================
+           PRINT / PDF
+        ========================= */
+
+        @media print {
+            nav {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            main {
+                margin: 0;
+            }
+
+            section {
+                border: none;
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+
+            footer {
+                display: none;
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                max-width: 500px;
+            }
+
+            .skills-grid,
+            .results {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .education {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">KK</div>
+
+        <ul class="nav-links">
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero" id="profil">
+
+    <div class="hero-container">
+
+        <div>
+
+            <h1>Kevin<br>kamdem</h1>
+
+            <div class="title">
+                Technicien Méthodes Industrialisation
+            </div>
+
+            <p class="hero-description">
+                Technicien méthodes spécialisé dans
+                <strong>l'optimisation des flux de production</strong>,
+                l'industrialisation et l'amélioration continue.
+                Orienté terrain et résultats, avec une approche axée sur
+                la réduction des coûts, des temps de cycle et des risques.
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <h3>Contact</h3>
+
+            <div class="contact-item">
+                <strong>Localisation</strong>
+                Augsburg, Allemagne
+            </div>
+
+            <div class="contact-item">
+                <strong>Email</strong>
+                kevin.kamdem@email.com
+            </div>
+
+            <div class="contact-item">
+                <strong>Téléphone</strong>
+                +49 XXX XXXXXXX
+            </div>
+
+            <div class="contact-item">
+                <strong>LinkedIn</strong>
+                linkedin.com/in/kevin-kamdem
+            </div>
+
+            <div class="contact-item">
+                <strong>Portfolio</strong>
+                kevin-kamdem.github.io
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- =========================
+         RÉSULTATS
+    ========================= -->
+
+    <section>
+
+        <h2 class="section-title">
+            Résultats clés
+        </h2>
+
+        <div class="results">
+
+            <div class="result-card">
+                <div class="result-number">-12%</div>
+                <p>
+                    Réduction des coûts de fabrication
+                    sur un projet d'optimisation.
+                </p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-number">-20%</div>
+                <p>
+                    Réduction des goulets d'étranglement
+                    grâce à l'analyse et l'équilibrage des postes.
+                </p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-number">-15%</div>
+                <p>
+                    Gain d'espace obtenu grâce à la
+                    réimplantation d'un atelier.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPÉRIENCE
+    ========================= -->
+
+    <section id="experience">
+
+        <h2 class="section-title">
+            Expérience professionnelle
+        </h2>
+
+
+        <article class="experience">
+
+            <div class="experience-header">
+
+                <h3>
+                    Technicien Méthodes / Industrialisation
+                </h3>
+
+                <span class="date">
+                    2023 — Aujourd'hui
+                </span>
+
+            </div>
+
+            <div class="company">
+                Entreprise industrielle — Ville
+            </div>
+
+            <ul>
+
+                <li>
+                    Conception de A à Z des
+                    <strong>gammes de fabrication</strong>
+                    et fiches d'instructions destinées aux opérateurs.
+                </li>
+
+                <li>
+                    Suivi et validation des phases de
+                    prototypes et préséries avec un objectif de
+                    <span class="result">zéro défaut au lancement</span>.
+                </li>
+
+                <li>
+                    Analyse des processus de fabrication et
+                    identification des axes d'amélioration.
+                </li>
+
+                <li>
+                    Réimplantation d'un atelier de production selon
+                    les principes <strong>5S et Kaizen</strong>,
+                    avec un <span class="result">gain d'espace de 15%</span>.
+                </li>
+
+                <li>
+                    Analyse des temps et équilibrage des postes,
+                    permettant une <span class="result">
+                    réduction de 20% des goulets d'étranglement</span>.
+                </li>
+
+                <li>
+                    Participation à des projets d'amélioration continue
+                    ayant permis une <span class="result">
+                    réduction de 12% des coûts de fabrication</span>.
+                </li>
+
+            </ul>
+
+        </article>
+
+
+        <article class="experience">
+
+            <div class="experience-header">
+
+                <h3>
+                    Technicien Méthodes
+                </h3>
+
+                <span class="date">
+                    2021 — 2023
+                </span>
+
+            </div>
+
+            <div class="company">
+                Entreprise industrielle — Ville
+            </div>
+
+            <ul>
+
+                <li>
+                    Création et optimisation des gammes de fabrication.
+                </li>
+
+                <li>
+                    Support technique quotidien auprès des équipes
+                    de production.
+                </li>
+
+                <li>
+                    Analyse des problèmes rencontrés en atelier et
+                    mise en œuvre d'actions correctives.
+                </li>
+
+                <li>
+                    Conception de gabarits et outillages pour
+                    sécuriser et accélérer les opérations d'assemblage.
+                </li>
+
+                <li>
+                    Programmation et optimisation des trajectoires
+                    d'outils sur logiciel FAO.
+                </li>
+
+            </ul>
+
+        </article>
+
+
+        <article class="experience">
+
+            <div class="experience-header">
+
+                <h3>
+                    Stage / Alternance — Méthodes
+                </h3>
+
+                <span class="date">
+                    2019 — 2021
+                </span>
+
+            </div>
+
+            <div class="company">
+                Entreprise industrielle — Ville
+            </div>
+
+            <ul>
+
+                <li>
+                    Participation à l'amélioration des processus
+                    de production.
+                </li>
+
+                <li>
+                    Mise à jour des documents techniques et
+                    instructions de travail.
+                </li>
+
+                <li>
+                    Participation aux chantiers 5S et amélioration continue.
+                </li>
+
+            </ul>
+
+        </article>
+
+    </section>
+
+
+    <!-- =========================
+         COMPÉTENCES
+    ========================= -->
+
+    <section id="competences">
+
+        <h2 class="section-title">
+            Compétences techniques
+        </h2>
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <h3>Logiciels & ERP</h3>
+
+                <div class="tags">
+
+                    <span class="tag">SolidWorks</span>
+                    <span class="tag">CATIA</span>
+                    <span class="tag">Creo</span>
+                    <span class="tag">SAP</span>
+                    <span class="tag">Clipper</span>
+                    <span class="tag">FAO</span>
+                    <span class="tag">CAO</span>
+                    <span class="tag">GPAO</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Méthodes & Lean</h3>
+
+                <div class="tags">
+
+                    <span class="tag">5S</span>
+                    <span class="tag">Kaizen</span>
+                    <span class="tag">SMED</span>
+                    <span class="tag">VSM</span>
+                    <span class="tag">AMDEC</span>
+                    <span class="tag">Lean Manufacturing</span>
+                    <span class="tag">Amélioration continue</span>
+                    <span class="tag">Chrono-analyse</span>
+                    <span class="tag">MTM</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Production</h3>
+
+                <div class="tags">
+
+                    <span class="tag">Industrialisation</span>
+                    <span class="tag">Gammes de fabrication</span>
+                    <span class="tag">Instructions opérateurs</span>
+                    <span class="tag">Outillage</span>
+                    <span class="tag">Gabarits</span>
+                    <span class="tag">Prototypage</span>
+                    <span class="tag">Préséries</span>
+                    <span class="tag">Optimisation des flux</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SAVOIR-ÊTRE
+    ========================= -->
+
+    <section>
+
+        <h2 class="section-title">
+            Savoir-être
+        </h2>
+
+        <div class="soft-skills">
+
+            <span class="soft-skill">
+                Pragmatique
+            </span>
+
+            <span class="soft-skill">
+                Orienté résultats
+            </span>
+
+            <span class="soft-skill">
+                Esprit d'analyse
+            </span>
+
+            <span class="soft-skill">
+                Communication transversale
+            </span>
+
+            <span class="soft-skill">
+                Pédagogie terrain
+            </span>
+
+            <span class="soft-skill">
+                Travail en équipe
+            </span>
+
+            <span class="soft-skill">
+                Gestion du stress
+            </span>
+
+            <span class="soft-skill">
+                Résolution de problèmes
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FORMATION
+    ========================= -->
+
+    <section id="formation">
+
+        <h2 class="section-title">
+            Formation
+        </h2>
+
+
+        <div class="education">
+
+            <div class="education-year">
+                2021
+            </div>
+
+            <div>
+
+                <h3>
+                    BTS / BUT Industrialisation des Produits Mécaniques
+                </h3>
+
+                <p>
+                    Établissement — Ville
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="education">
+
+            <div class="education-year">
+                2023
+            </div>
+
+            <div>
+
+                <h3>
+                    Licence Professionnelle — Gestion de la Production Industrielle
+                </h3>
+
+                <p>
+                    Établissement — Ville
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LANGUES
+    ========================= -->
+
+    <section>
+
+        <h2 class="section-title">
+            Langues
+        </h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Français</h3>
+                <p>Langue maternelle / courant</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Allemand</h3>
+                <p>À compléter — ex. B2</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Anglais</h3>
+                <p>À compléter — ex. B1/B2</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Me contacter
+        </h2>
+
+        <p style="font-size: 18px; margin-bottom: 20px;">
+            Vous recherchez un technicien méthodes capable de faire
+            le lien entre le bureau d'études et le terrain ?
+        </p>
+
+        <p>
+            <strong>Kevin kamdem</strong><br>
+            Technicien Méthodes Industrialisation
+        </p>
+
+        <p style="margin-top: 15px;">
+            📧 kevin.kamdem@email.com<br>
+            📱 +49 XXX XXXXXXX<br>
+            📍 Augsburg, Allemagne
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>Kevin kamdem</strong> —
+        Technicien Méthodes Industrialisation
+    </p>
+
+</footer>
+
+</body>
+</html>
